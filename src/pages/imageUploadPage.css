@@ -85,7 +85,7 @@ button:disabled {
 }
 
 .loading::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -101,10 +101,10 @@ button:disabled {
 
 @keyframes loading-spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -134,11 +134,11 @@ button:disabled {
 
 @media (max-width: 600px) {
   .imageUploadContainer {
-      width: 90%; /* Responsive width */
-      padding: 15px; /* Reduce padding on smaller screens */
+    width: 90%; /* Responsive width */
+    padding: 15px; /* Reduce padding on smaller screens */
   }
-  
+
   h1 {
-      font-size: 1.5rem; /* Adjust title size */
+    font-size: 1.5rem; /* Adjust title size */
   }
 }
