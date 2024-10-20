@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom"; // Import useParams to get the grievanceId from the URL
-import "./ImageUploadPage.css"; // Import CSS for styles
+import "./imageUploadPage.css"; // Import CSS for styles
 
 const ImageUploadPage = () => {
   const { grievanceId } = useParams(); // Extract grievanceId from URL parameters
