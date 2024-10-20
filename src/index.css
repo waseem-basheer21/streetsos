@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background: linear-gradient(135deg, #001f3f, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Ensure div containers with background color remain unaffected */
+  div {
+    background-color: transparent; /* Default to transparent unless explicitly set */
+  }

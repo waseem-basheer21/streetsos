@@ -1,0 +1,144 @@
+.imageUploadContainer {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Slightly larger radius for a smoother look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for elevation */
+  text-align: center;
+  background-color: #ffffff; /* White background for contrast */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imageUploadContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 2rem; /* Increased font size */
+  margin-bottom: 20px;
+  color: #1f2937; /* Dark color for the title */
+  font-weight: 700; /* Bold title */
+}
+
+.input-field {
+  margin-bottom: 20px; /* Spacing between input fields */
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  width: 100%; /* Full width */
+}
+
+input[type="file"]:focus {
+  border-color: #0056b3; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.imagePreview {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e9ecef; /* Light gray background for previews */
+  display: flex; /* Center the image preview */
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 4px;
+}
+
+button {
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Increased padding for better touch area */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for scale effect */
+  font-size: 1rem; /* Increased font size for better readability */
+}
+
+button:hover:not(:disabled) {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: loading-spin 0.6s linear infinite;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes loading-spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.uploadStatus {
+  margin-top: 10px;
+  font-weight: 500; /* Make status messages bold */
+}
+
+.success {
+  color: #28a745; /* Green for success messages */
+  font-size: 1rem; /* Make success message slightly larger */
+}
+
+.error {
+  color: #dc3545; /* Red for error messages */
+  font-size: 1rem; /* Make error message slightly larger */
+}
+
+/* Center the entire form */
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f4f4f9; /* Light background for the page */
+}
+
+@media (max-width: 600px) {
+  .imageUploadContainer {
+      width: 90%; /* Responsive width */
+      padding: 15px; /* Reduce padding on smaller screens */
+  }
+  
+  h1 {
+      font-size: 1.5rem; /* Adjust title size */
+  }
+}
